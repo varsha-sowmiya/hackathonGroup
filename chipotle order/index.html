@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codesters - Chipotle Order System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Codesters</h1>
+    <p>Chipotle Digital Order System</p>
+
+    <!-- BASE -->
+    <div class="section">
+      <h2>1. Choose Your Base</h2>
+      <div class="options" id="base">
+        <button>Bowl</button>
+        <button>Burrito</button>
+        <button>Tacos</button>
+        <button>Salad</button>
+      </div>
+    </div>
+
+    <!-- RICE -->
+    <div class="section">
+      <h2>2. Choose Your Rice</h2>
+      <div class="options" id="rice">
+        <button>White</button>
+        <button>Brown</button>
+        <button>Both</button>
+        <button>None</button>
+      </div>
+    </div>
+
+    <!-- PROTEIN -->
+    <div class="section">
+      <h2>3. Choose Your Protein</h2>
+      <div class="options" id="protein">
+        <button>Chicken</button>
+        <button>Steak</button>
+        <button>Carnitas</button>
+        <button>Barbacoa</button>
+        <button>Sofritas</button>
+        <button>Salmon</button>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="section">
+      <h2>4. Add Vegetables</h2>
+      <div class="options multi" id="veggies">
+        <button>Black Beans</button>
+        <button>Pinto Beans</button>
+        <button>Fajita Veggies</button>
+        <button>Guac</button>
+        <button>Lettuce</button>
+        <button>Tomato</button>
+        <button>Corn</button>
+      </div>
+    </div>
+
+    <!-- TOPPINGS -->
+    <div class="section">
+      <h2>5. Add Toppings</h2>
+      <div class="options multi" id="toppings">
+        <button>Cheese</button>
+        <button>Sour Cream</button>
+        <button>Hot Chilli Sauce</button>
+        <button>Sweet Onion Sauce</button>
+        <button>Chipotle Sauce</button>
+        <button>Smoky BBQ Sauce</button>
+        <button>Garlic Aioli Sauce</button>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="clearOrder()" class="clear">Clear Order</button>
+      <button onclick="generateCode()" class="send">Generate Code</button>
+    </div>
+
+    <h3 id="output">Your Code: ---</h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
