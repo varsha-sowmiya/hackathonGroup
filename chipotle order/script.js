@@ -28,10 +28,32 @@ function setupSection(sectionId, isMulti = false) {
         if(!Array.isArray(order[sectionId])) {
           order[sectionId] = [];
         }
+
+        if (btn.classList.contains("active")){
+          if (order.veggies.length>1){
+            btn.classList.remove("active");
+            return;
+          }
+
+        }else{
+          order.veggies=order.veggies.filter(item => item !== btn.innerText);
+          
+        }
+
+        if (btn.classList.contains("active")){
+          if (order.toppings.length>1){
+            btn.classList.remove("active");
+            return;
+          }
+
+        }else{
+          order.toppings=order.toppings.filter(item => item !== btn.innerText);
+          
+        }
         if (btn.classList.contains("active")) {
           order[sectionId].push(btn.innerText);
         } else {
-          order.toppings = order.toppings.filter(t => t !== btn.innerText);
+          order[sectionId] = order[sectionId].filter(item => item !== btn.innerText);
         }
       }
 
@@ -43,8 +65,8 @@ function setupSection(sectionId, isMulti = false) {
 setupSection("base");
 setupSection("rice");
 setupSection("protein");
-setupSelection("veggies", true);
-setupSection("toppings", true);
+setupSection("veggies",true);
+setupSection("toppings",true);
 
 // generate code like B-WR-CK-T3
 function generateCode() {
